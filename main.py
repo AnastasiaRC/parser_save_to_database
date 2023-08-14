@@ -6,7 +6,7 @@ from utils import formatting_data
 def main():
     params = config()
     db = DBManager(dbname='hh_ru', **params)
-    db.drop_tables()
+    # db.drop_tables()
     db.create_tables()
 
     employer_ids = [
