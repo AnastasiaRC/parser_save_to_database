@@ -8,11 +8,11 @@ class DBManager:
 
     def create_tables(self):
         with self.conn.cursor() as cur:
-            cur.execute("""CREATE TABLE companies(
+            cur.execute("""CREATE TABLE IF NOT EXISTS companies(
             company_id SERIAL PRIMARY KEY,
             title_company VARCHAR(255) NOT NULL UNIQUE,
             area VARCHAR(255) NOT NULL);
-            CREATE TABLE vacancies(
+            CREATE TABLE IF NOT EXISTS vacancies(
             vacancy_id SERIAL PRIMARY KEY,
             company_id INTEGER REFERENCES companies(company_id),
             title_vacancy VARCHAR(255) NOT NULL,

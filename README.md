@@ -28,6 +28,13 @@
 
 - Склонировать репозиторий в PyCharm (команда: git clone https://github.com/AnastasiaRC/parser_save_to_database.git)
 - В программе pgAdmin4 создать базу данных "hh_ru"
-- В файле main.ру закомментировать db.drop_tables() (только при первом запуске, далее вернуть)
+- Для подключению к БД необходимо создать файл database.ini и указать:
+
+[postgresql]
+host=localhost
+user=... (имя пользователя)
+password=... (ваш пароль)
+
+- В файле main.ру при втором запуске разкомментировать db.drop_tables()
 - Установить зависимости (команда: pip install -r requirements.txt)
 - Запустить проект
